@@ -29,7 +29,7 @@ exports.getProductsForCategory = (category) => {
   let products_filter = products.filter((product) => product.categorias.includes(category))
 
   // En caso de no existir ningun producto retorna -1 (equivalente a que no fue encontrado) (Para captar el error 404)
-  if (products_filter == 0 ) return -1
+  if (products_filter.length == 0 ) return -1
 
   // Se retornan los productos
   return products_filter
@@ -75,7 +75,7 @@ exports.removeProduct = (productId) => {
     // Buscamos en los productos si existe el id
     let find_product_id = products.filter((product) => { return product.id == productId})
     // Condicional en caso de que el id del producto no exista, asi se puede capturar en el router
-    if (find_product_id == 0 ) return -1
+    if (find_product_id.length == 0 ) return -1
 
     // Se procede a filtrar ignorando al id que quiero eliminar
     products = products.filter((product) => {  

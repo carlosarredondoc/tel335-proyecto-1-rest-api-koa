@@ -75,7 +75,7 @@ Formato: JSON
 Metodo: GET
 ~~~
 
-4. Cree un endpoint para filtrar los productos por categorias y ordenar segun su precio (de manera asc (Menor a Mayor) y desc (Mayor a Menor)), ambos parametros se ingresaran por la url, en caso de no encontrar la categoria devolver codigo de estado 404 y en caso contrario 200.
+4. Cree un endpoint para filtrar los productos por categorias y ordenar segun su precio (de manera asc (Menor a Mayor) y desc (Mayor a Menor)), ambos parametros se ingresaran por la url, en caso de no encontrar la categoria devolver codigo de estado 404, en caso de que :ord sea diferente a asc o desc mostrar error 400, con peticion realizada de manera erronea y en caso contrario 200.
 
 ~~~
 Ruta: /api/products/:category/:ord
@@ -85,7 +85,7 @@ Metodo: GET
 
 ## Bonus
 
-5. Cree un endpoint para actualizar un producto mediante su id, recibe por url el id del producto y por body los nuevos datos, en caso de no existir el id retornar un codigo de estado 400 y otro caso 200.
+5. Cree un endpoint para actualizar un producto mediante su id, recibe por url el id del producto y por body los nuevos datos, en caso de no existir el id retornar un codigo de estado 404 y otro caso 200.
 
 ~~~
 Ruta: /api/product/:id
@@ -93,7 +93,7 @@ Formato: JSON
 Metodo: PUT
 ~~~
 
-6. Cree un endpoint para eliminar un producto mediante su id, recibe por url el id del producto, en caso de ser un id de producto inexistente devolver codigo de estado 400 en otro caso 200.
+6. Cree un endpoint para eliminar un producto mediante su id, recibe por url el id del producto, en caso de ser un id de producto inexistente devolver codigo de estado 404 en otro caso 200.
 
 ~~~
 Ruta: /api/product/:id

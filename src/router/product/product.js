@@ -58,7 +58,7 @@ exports.updateProduct = (ctx) => {
     // Action para actualizar un producto a partir de su id, en caso de no encontrar el id retornara un arreglo vacio []
     let products_update = productActions.updateProduct(ctx.params.id,ctx.request.body)
     if (products_update.length == 0 ){
-        ctx.status = 400
+        ctx.status = 404
         ctx.body = {message: `El producto con id ${ctx.params.id} no existe`}
     }else{
         let product = products_update[0]
@@ -72,7 +72,7 @@ exports.removeProduct = (ctx) => {
     //Action la cual remueve un producto en caso de ser encontrado, en caso contrario devolvera un -1 indicando que no existe
     let product_delete = productActions.removeProduct(ctx.params.id)
     if (product_delete == -1) {
-        ctx.status = 400
+        ctx.status = 404
         ctx.body = {message: `El producto con id ${ctx.params.id} no existe`}
     }else{
         ctx.body = { message: `Producto id: ${ctx.params.id} ha sido removido` }
