@@ -11,6 +11,33 @@ Se entregara un archivo products.json con la informacion del inventario.
 
 Por defecto la Api Rest del proyecto base corre en el puerto 3000
 
+# Disposicion de los archivos
+
+La carpeta principal es src.
+
+Dentro contiene 3 carpetas y un archivo: 
+- actions (funcionalidades)
+- data (contiene los datos en products.json)
+- router (contiene el archivo principal que llama al router y a la carpeta con las demas rutas )
+
+~~~
+├── Makefile
+├── package.json
+├── package-lock.json
+├── README.md
+└── src
+    ├── actions
+    │   └── product
+    │       └── product.js
+    ├── data
+    │   └── products.json
+    ├── index.js
+    └── router
+        ├── index.js
+        └── product
+            └── product.js
+~~~
+
 # Metodos asociados al CRUD
 
 | Sigla | Funciones basicas de base de datos   | Metodos HTTP Asociado Regularmente |
@@ -75,6 +102,8 @@ Metodo: DELETE
 ~~~
 
 # Comandos basicos de git
+
+[Git Sheet Cheat](https://about.gitlab.com/images/press/git-cheat-sheet.pdf)
 
 ### Hacer un commit
 

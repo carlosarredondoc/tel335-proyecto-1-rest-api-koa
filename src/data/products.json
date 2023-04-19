@@ -1,0 +1,73 @@
+[
+    {
+      "id": 1,
+      "nombre": "Coca-Cola",
+      "precio": 3.50,
+      "cantidad": 10,
+      "categorias": ["bebidas", "refrescos"]
+    },
+    {
+      "id": 2,
+      "nombre": "Doritos",
+      "precio": 1.50,
+      "cantidad": 20,
+      "categorias": ["snacks"]
+    },
+    {
+      "id": 3,
+      "nombre": "Halls",
+      "precio": 0.75,
+      "cantidad": 30,
+      "categorias": ["dulces"]
+    },
+    {
+      "id": 4,
+      "nombre": "Red Bull",
+      "precio": 4.50,
+      "cantidad": 5,
+      "categorias": ["bebidas", "energéticos"]
+    },
+    {
+      "id": 5,
+      "nombre": "Lacasitos",
+      "precio": 0.50,
+      "cantidad": 40,
+      "categorias": ["dulces"]
+    },
+    {
+      "id": 6,
+      "nombre": "Kit Kat",
+      "precio": 1.00,
+      "cantidad": 15,
+      "categorias": ["dulces", "chocolates"]
+    },
+    {
+      "id": 7,
+      "nombre": "Chicles Trident",
+      "precio": 0.50,
+      "cantidad": 25,
+      "categorias": ["dulces"]
+    },
+    {
+      "id": 8,
+      "nombre": "Agua mineral",
+      "precio": 1.25,
+      "cantidad": 12,
+      "categorias": ["bebidas", "agua"]
+    },
+    {
+      "id": 9,
+      "nombre": "Budweiser",
+      "precio": 2.75,
+      "cantidad": 8,
+      "categorias": ["bebidas", "cervezas"]
+    },
+    {
+      "id": 10,
+      "nombre": "Pepsi",
+      "precio": 3.00,
+      "cantidad": 12,
+      "categorias": ["bebidas", "refrescos"]
+    }
+  ]
+  
