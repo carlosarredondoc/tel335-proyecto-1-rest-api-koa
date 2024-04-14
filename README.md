@@ -40,7 +40,7 @@ Dentro contiene 3 carpetas y un archivo:
 
 # Instrucciones utiles
 
-Instalacion de dependencia del package.json
+Instalacion de dependencia del package.json (Recordar siempre hacer este comando al bajar un proyecto en node)
 ~~~
 npm install
 ~~~
