@@ -1,4 +1,4 @@
-# Control 1:  **Ejemplo de Api Rest en Koa**
+# Proyecto 1:  **Ejemplo de Api Rest en Koa**
 
 Creado por Carlos Arredondo
 
@@ -36,6 +36,28 @@ Dentro contiene 3 carpetas y un archivo:
         ├── index.js
         └── product
             └── product.js
+~~~
+
+# Instrucciones utiles
+
+Instalacion de dependencia del package.json
+~~~
+npm install
+~~~
+
+Instalacion de dependencia koa
+~~~
+npm install koa
+~~~
+
+Instalacion de dependencia koa como desarrollador
+~~~
+npm install -D koa
+~~~
+
+Ejecucion de nodemon (recordar tenerlo instalado y configurado en el package.json)
+~~~
+npm run start:dev
 ~~~
 
 # Metodos asociados al CRUD
