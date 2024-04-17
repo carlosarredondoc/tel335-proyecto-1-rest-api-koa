@@ -1,6 +1,8 @@
 # Proyecto 1:  **Ejemplo de Api Rest en Koa**
 
-Creado por Carlos Arredondo
+Base creada por Carlos Arredondo
+
+Completada por Laura Levraud
 
 Template usado: **[Repositorio base (Prof. Francisco Cabezas)](https://github.com/tel335/basic_rest_api)**
 
@@ -71,7 +73,9 @@ npm run start:dev
 
 # Requerimientos
 
-0. Realice un **fork** del repositorio a su github y luego realice la clonacion de este y cree una **rama** con nombre **control-1-nombre-apellido**
+[X] Realice un **fork** del repositorio a su github y luego realice la clonacion de este y cree una **rama** con nombre **control-1-nombre-apellido**
+
+[X] Instalacion de los modules y verificacion del funcionamiento en http://localhost:3000/health donde se despliegue { message: ok}
 
 1. Crear un endpoint para visualizar los productos, el cual retorne en formato JSON la lista de productos con codigo de estado 200.
 
