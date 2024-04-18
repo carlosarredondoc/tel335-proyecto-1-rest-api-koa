@@ -11,9 +11,9 @@ exports.addProduct = (productData) => {
     if ( productData === undefined || productData.nombre === undefined || productData.precio === undefined || productData.cantidad === undefined || productData.categorias === undefined) {
         throw new Error('Missing product data')
     }
-    const nextId = products.length+1
+    const nextId = (products.length == 0)? 1 : products[products.length - 1].id + 1
     const product = {
-        id: nextId,// asignar id de manera incremental e irrepetible
+        id: nextId,
         nombre: productData.nombre,
         precio: productData.precio,
         cantidad: productData.cantidad,
@@ -25,3 +25,16 @@ exports.addProduct = (productData) => {
 }
 
 
+function checkExistingCategory(category) {
+    return products.some(product => product.categorias.includes(category))
+}
+
+exports.getProductsByCategory = (category) => {
+    if (category === undefined) {
+        throw new Error('Missing category')
+    }
+    if (!checkExistingCategory(category)) {
+        throw new Error('Category not found')
+    }
+    return products.filter(product => product.categorias.includes(category))
+}

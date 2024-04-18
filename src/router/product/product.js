@@ -2,11 +2,11 @@
 import productsActions from '../../actions/product/product'
 
 exports.getAllProducts = (ctx) => {
-    const prods = productsActions.getProducts()
-    if (prods === undefined) {
+    const products = productsActions.getProducts()
+    if (products === undefined) {
         ctx.status = 500
     } else {
-        ctx.body = prods
+        ctx.body = products
         ctx.status = 200
     }
     return ctx
@@ -19,9 +19,22 @@ exports.addNewProduct = (ctx) => {
         ctx.body = { message: "Product created", product: product }
         ctx.status = 200
     } catch (error) {
-        ctx.body = { message: `Error creating user: ${error}`}
+        ctx.body = { Error: error.message }
         ctx.status = 400
     }
     return ctx
 }
 
+
+exports.getProductsByCategory = (ctx) => {
+    const category = ctx.params.category
+    try {
+        const products = productsActions.getProductsByCategory(category)
+        ctx.body = products
+        ctx.status = 200
+    } catch (error) {
+        ctx.body = { Error: error.message }
+        ctx.status = (error.message === 'Category not found') ? 404 : 400
+    }
+    return ctx
+}
