@@ -10,6 +10,8 @@ router.get('/health', getHealth)
 router.get('/api/products', products.getAllProducts)
 
 // Endpoint 2
+router.post('/api/products', products.addNewProduct)
+router.put('/api/products', products.addNewProduct)
 
 
 // Endpoint 3 

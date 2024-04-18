@@ -77,7 +77,7 @@ npm run start:dev
 
 [X] Instalacion de los modules y verificacion del funcionamiento en http://localhost:3000/health donde se despliegue { message: ok}
 
-1. Crear un endpoint para visualizar los productos, el cual retorne en formato JSON la lista de productos con codigo de estado 200.
+[X] Crear un endpoint para visualizar los productos, el cual retorne en formato JSON la lista de productos con codigo de estado 200.
 
 ~~~
 Ruta: /api/products
@@ -85,10 +85,10 @@ Formato: JSON
 Metodo: GET
 ~~~
 
-2. Cree un endpoint para agregar mas productos, el cual retorne el producto agregado en formato JSON, debe recibir los parametros por el body, en caso de ingresar parametros insuficientes debe retornar un codigo de estado 400.
+[X] Cree un endpoint para agregar mas productos, el cual retorne el producto agregado en formato JSON, debe recibir los parametros por el body, en caso de ingresar parametros insuficientes debe retornar un codigo de estado 400.
 
 ~~~
-Ruta: /api/product
+Ruta: /api/products
 Formato: JSON
 Metodo: POST o PUT
 ~~~
