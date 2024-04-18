@@ -1,7 +1,13 @@
 
-import productActions from '../../actions/product/product'
+import productsActions from '../../actions/product/product'
 
 exports.getAllProducts = (ctx) => {
-    ctx.body = productActions.getProducts()
+    const prods = productsActions.getProducts()
+    if (prods === undefined) {
+        ctx.status = 500
+    } else {
+        ctx.body = prods
+        ctx.status = 200
+    }
     return ctx
 }

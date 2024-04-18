@@ -7,7 +7,7 @@ const router = new Router()
 router.get('/health', getHealth)
 
 // Endpoint 1 
-//router.get('/api/products', products...)
+router.get('/api/products', products.getAllProducts)
 
 // Endpoint 2
 
