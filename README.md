@@ -93,7 +93,7 @@ Formato: JSON
 Metodo: POST o PUT
 ~~~
 
-3. Cree un endpoint para filtrar los productos por categorias, la cual se ingresara por parametros en la url, en caso de no encontrar la categoria devolver codigo de estado 404 y en caso contrario 200.
+[X] Cree un endpoint para filtrar los productos por categorias, la cual se ingresara por parametros en la url, en caso de no encontrar la categoria devolver codigo de estado 404 y en caso contrario 200.
 
 ~~~
 Ruta: /api/products/:category
