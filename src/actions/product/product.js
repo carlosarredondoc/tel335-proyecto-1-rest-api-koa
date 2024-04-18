@@ -29,12 +29,22 @@ function checkExistingCategory(category) {
     return products.some(product => product.categorias.includes(category))
 }
 
-exports.getProductsByCategory = (category) => {
+exports.getProductsByCategory = (category, ord) => {
     if (category === undefined) {
         throw new Error('Missing category')
     }
     if (!checkExistingCategory(category)) {
         throw new Error('Category not found')
     }
-    return products.filter(product => product.categorias.includes(category))
+    const filteredProducts = products.filter(product => product.categorias.includes(category))
+    if (ord === undefined) {
+        return filteredProducts
+    }
+    if (ord === 'asc') {
+        return filteredProducts.sort((a, b) => a.precio - b.precio)
+    }
+    if (ord === 'desc') {
+        return filteredProducts.sort((a, b) => b.precio - a.precio)
+    }
+    throw new Error('Invalid ord value')
 }

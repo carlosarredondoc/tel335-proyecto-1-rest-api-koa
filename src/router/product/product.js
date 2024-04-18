@@ -28,8 +28,9 @@ exports.addNewProduct = (ctx) => {
 
 exports.getProductsByCategory = (ctx) => {
     const category = ctx.params.category
+    const ord = ctx.params.ord
     try {
-        const products = productsActions.getProductsByCategory(category)
+        const products = productsActions.getProductsByCategory(category,ord)
         ctx.body = products
         ctx.status = 200
     } catch (error) {
