@@ -23,6 +23,6 @@ router.get('/api/products/:category/:ord', products.getProductsByCategory)
 router.put('/api/products/:id', products.updateProduct)
 
 // Endpoint 6
-
+router.delete('/api/products/:id', products.deleteProduct)
 
 export default router

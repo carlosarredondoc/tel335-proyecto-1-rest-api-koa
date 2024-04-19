@@ -53,3 +53,16 @@ exports.updateProduct = (ctx) => {
     }
     return ctx
 }
+
+exports.deleteProduct = (ctx) => {
+    const id = ctx.params.id
+    try {
+        const numDeleted = productsActions.deleteProduct(id)
+        ctx.body = { message: `${numDeleted} product${ (numDeleted > 1)? 's' : ''} deleted successfully` }
+        ctx.status = 200
+    } catch (error) {
+        ctx.body = { Error: error.message }
+        ctx.status = (error.message === 'Id not found') ? 404 : 400
+    }
+    return ctx
+}

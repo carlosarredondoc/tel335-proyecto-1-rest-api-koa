@@ -114,15 +114,15 @@ Metodo: GET
 [X] Cree un endpoint para actualizar un producto mediante su id, recibe por url el id del producto y por body los nuevos datos, en caso de no existir el id retornar un codigo de estado 404 y otro caso 200.
 
 ~~~
-Ruta: /api/product/:id
+Ruta: /api/products/:id
 Formato: JSON
 Metodo: PUT
 ~~~
 
-6. Cree un endpoint para eliminar un producto mediante su id, recibe por url el id del producto, en caso de ser un id de producto inexistente devolver codigo de estado 404 en otro caso 200.
+[X] Cree un endpoint para eliminar un producto mediante su id, recibe por url el id del producto, en caso de ser un id de producto inexistente devolver codigo de estado 404 en otro caso 200.
 
 ~~~
-Ruta: /api/product/:id
+Ruta: /api/products/:id
 Formato: JSON
 Metodo: DELETE
 ~~~

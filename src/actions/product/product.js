@@ -54,6 +54,8 @@ function checkExistingId(id) {
     return products.some(product => product.id == id)
 }
 
+// Cuidado: esta funcion modifica unos productos de la lista de productos, pero el data/products.json no se modifica. 
+// Asi que si se reinicia el servidor, los cambios desaparecen.
 exports.updateProduct = (id, productData) => {
     if (id === undefined) { // No deberia ser posible llegar a este punto, ya que este caso corresponde a la creacion de un nuevo producto
         throw new Error('Missing id')
@@ -74,4 +76,19 @@ exports.updateProduct = (id, productData) => {
     }
     products = products.map(product => product.id == id ? newProduct : product)
     return newProduct
+}
+
+
+// Cuidado: esta funcion borra unos productos de la lista de productos, pero el data/products.json no se modifica. 
+// Asi que si se reinicia el servidor, los cambios desaparecen.
+exports.deleteProduct = (id) => {
+    if (id === undefined) { // No deberia ser posible llegar a este punto, ya que este caso no sube un servicio del servidor
+        throw new Error('Missing id')
+    }
+    if (!checkExistingId(id)) {
+        throw new Error('Id not found')
+    }
+    const initialLength = products.length
+    products = products.filter(product => product.id != id)
+    return initialLength - products.length
 }
