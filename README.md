@@ -75,7 +75,7 @@ npm run start:dev
 
 [X] Realice un **fork** del repositorio a su github y luego realice la clonacion de este y cree una **rama** con nombre **control-1-nombre-apellido**
 
-[X] Instalacion de los modules y verificacion del funcionamiento en http://localhost:3000/health donde se despliegue { message: ok}
+[X] Instalacion de los modules y verificacion del funcionamiento en http://localhost:3000/health donde se despliega { message: ok }
 
 [X] Crear un endpoint para visualizar los productos, el cual retorne en formato JSON la lista de productos con codigo de estado 200.
 
