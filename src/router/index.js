@@ -20,7 +20,7 @@ router.get('/api/products/:category', products.getProductsByCategory)
 router.get('/api/products/:category/:ord', products.getProductsByCategory)
 
 // Endpoint 5
-
+router.put('/api/products/:id', products.updateProduct)
 
 // Endpoint 6
 

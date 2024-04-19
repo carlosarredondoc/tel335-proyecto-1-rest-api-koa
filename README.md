@@ -111,7 +111,7 @@ Metodo: GET
 
 ## Bonus
 
-5. Cree un endpoint para actualizar un producto mediante su id, recibe por url el id del producto y por body los nuevos datos, en caso de no existir el id retornar un codigo de estado 404 y otro caso 200.
+[X] Cree un endpoint para actualizar un producto mediante su id, recibe por url el id del producto y por body los nuevos datos, en caso de no existir el id retornar un codigo de estado 404 y otro caso 200.
 
 ~~~
 Ruta: /api/product/:id

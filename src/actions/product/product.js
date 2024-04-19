@@ -48,3 +48,30 @@ exports.getProductsByCategory = (category, ord) => {
     }
     throw new Error('Invalid ord value')
 }
+
+
+function checkExistingId(id) {
+    return products.some(product => product.id == id)
+}
+
+exports.updateProduct = (id, productData) => {
+    if (id === undefined) { // No deberia ser posible llegar a este punto, ya que este caso corresponde a la creacion de un nuevo producto
+        throw new Error('Missing id')
+    }
+    if (!checkExistingId(id)) {
+        throw new Error('Id not found')
+    }
+    if (productData === undefined) {
+        throw new Error('Missing product data')
+    }
+    const product = products.find(product => product.id == id)
+    const newProduct = {
+        id: product.id,
+        nombre: productData.nombre || product.nombre,
+        precio: productData.precio || product.precio,
+        cantidad: productData.cantidad || product.cantidad,
+        categorias: productData.categorias || product.categorias
+    }
+    products = products.map(product => product.id == id ? newProduct : product)
+    return newProduct
+}

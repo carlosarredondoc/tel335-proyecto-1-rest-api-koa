@@ -39,3 +39,17 @@ exports.getProductsByCategory = (ctx) => {
     }
     return ctx
 }
+
+exports.updateProduct = (ctx) => {
+    const id = ctx.params.id
+    const productData = ctx.request.body
+    try {
+        const product = productsActions.updateProduct(id, productData)
+        ctx.body = { message: "Product updated", product: product }
+        ctx.status = 200
+    } catch (error) {
+        ctx.body = { Error: error.message }
+        ctx.status = (error.message === 'Id not found') ? 404 : 400
+    }
+    return ctx
+}
