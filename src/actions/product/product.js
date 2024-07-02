@@ -1,15 +1,26 @@
 import Products from '../../data/products.json'
 let products = Products
 
+exports.clearProducts = () => {
+    products = []
+}
+
 exports.getProducts = () => {
     return products
 }
 
 // Cuidado: esta funcion agrega un nuevo producto a la lista de productos, pero el data/products.json no se modifica. 
 // Asi que si se reinicia el servidor, el nuevo producto desaparece.
-exports.addProduct = (productData) => {
-    if ( productData === undefined || productData.nombre === undefined || productData.precio === undefined || productData.cantidad === undefined || productData.categorias === undefined) {
-        throw new Error('Missing product data')
+exports.createProduct = (productData) => {
+    if ( productData === undefined 
+        || productData.nombre === undefined 
+        || productData.precio === undefined 
+        || productData.cantidad === undefined 
+        || productData.categorias === undefined
+        || (productData.nombre != undefined && productData.nombre == '')
+        || (productData.categorias != undefined && productData.categorias.length == 0)
+    ) {
+        throw new Error('Datos del product no proporcionados')
     }
     const nextId = (products.length == 0)? 1 : products[products.length - 1].id + 1
     const product = {
@@ -31,10 +42,10 @@ function checkExistingCategory(category) {
 
 exports.getProductsByCategory = (category, ord) => {
     if (category === undefined) {
-        throw new Error('Missing category')
+        throw new Error('Categoria no proporcionada')
     }
     if (!checkExistingCategory(category)) {
-        throw new Error('Category not found')
+        throw new Error('No product encontrado con este categoria')
     }
     const filteredProducts = products.filter(product => product.categorias.includes(category))
     if (ord === undefined) {
@@ -46,7 +57,7 @@ exports.getProductsByCategory = (category, ord) => {
     if (ord === 'desc') {
         return filteredProducts.sort((a, b) => b.precio - a.precio)
     }
-    throw new Error('Invalid ord value')
+    throw new Error('Orden no valido')
 }
 
 
@@ -58,13 +69,17 @@ function checkExistingId(id) {
 // Asi que si se reinicia el servidor, los cambios desaparecen.
 exports.updateProduct = (id, productData) => {
     if (id === undefined) { // No deberia ser posible llegar a este punto, ya que este caso corresponde a la creacion de un nuevo producto
-        throw new Error('Missing id')
+        throw new Error('Id del product no proporcionado')
     }
     if (!checkExistingId(id)) {
-        throw new Error('Id not found')
+        throw new Error('No product encontrado con este id')
     }
-    if (productData === undefined) {
-        throw new Error('Missing product data')
+    if (productData === undefined
+        || (productData.nombre === undefined && productData.precio === undefined && productData.cantidad === undefined && productData.categorias === undefined)
+        || (productData.nombre != undefined && productData.nombre == '')
+        || (productData.categorias != undefined && productData.categorias.length == 0)
+    ) {
+        throw new Error('Datos del nuevo product no proporcionados')
     }
     const product = products.find(product => product.id == id)
     const newProduct = {
@@ -83,10 +98,10 @@ exports.updateProduct = (id, productData) => {
 // Asi que si se reinicia el servidor, los cambios desaparecen.
 exports.deleteProduct = (id) => {
     if (id === undefined) { // No deberia ser posible llegar a este punto, ya que este caso no sube un servicio del servidor
-        throw new Error('Missing id')
+        throw new Error('Id del product no proporcionado')
     }
     if (!checkExistingId(id)) {
-        throw new Error('Id not found')
+        throw new Error('No product encontrado con este id')
     }
     const initialLength = products.length
     products = products.filter(product => product.id != id)
