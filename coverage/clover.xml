@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1719957014593" clover="3.2.0">
+  <project timestamp="1719957014594" name="All files">
+    <metrics statements="46" coveredstatements="46" conditionals="52" coveredconditionals="51" methods="16" coveredmethods="16" elements="114" coveredelements="113" complexity="0" loc="46" ncloc="46" packages="1" files="1" classes="1"/>
+    <file name="product.js" path="C:\Users\LauraLvd\Documents\Chile 2024\USM\Diseno de aplicaciones web y moviles\API_REST\Control1\tel335-proyecto-1-rest-api-koa\src\actions\product\product.js">
+      <metrics statements="46" coveredstatements="46" conditionals="52" coveredconditionals="51" methods="16" coveredmethods="16"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="5" count="10" type="stmt"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="9" count="13" type="stmt"/>
+      <line num="14" count="1" type="stmt"/>
+      <line num="15" count="19" type="cond" truecount="11" falsecount="0"/>
+      <line num="23" count="7" type="stmt"/>
+      <line num="25" count="12" type="cond" truecount="2" falsecount="0"/>
+      <line num="26" count="12" type="stmt"/>
+      <line num="34" count="12" type="stmt"/>
+      <line num="35" count="12" type="stmt"/>
+      <line num="40" count="9" type="stmt"/>
+      <line num="43" count="1" type="stmt"/>
+      <line num="44" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="45" count="1" type="stmt"/>
+      <line num="47" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="48" count="1" type="stmt"/>
+      <line num="50" count="11" type="stmt"/>
+      <line num="51" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="52" count="1" type="stmt"/>
+      <line num="54" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="55" count="1" type="stmt"/>
+      <line num="57" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="58" count="1" type="stmt"/>
+      <line num="60" count="1" type="stmt"/>
+      <line num="65" count="12" type="stmt"/>
+      <line num="70" count="1" type="stmt"/>
+      <line num="71" count="11" type="cond" truecount="2" falsecount="0"/>
+      <line num="72" count="1" type="stmt"/>
+      <line num="74" count="10" type="cond" truecount="2" falsecount="0"/>
+      <line num="75" count="1" type="stmt"/>
+      <line num="77" count="9" type="cond" truecount="11" falsecount="0"/>
+      <line num="82" count="4" type="stmt"/>
+      <line num="84" count="5" type="stmt"/>
+      <line num="85" count="5" type="stmt"/>
+      <line num="92" count="5" type="cond" truecount="1" falsecount="1"/>
+      <line num="93" count="5" type="stmt"/>
+      <line num="99" count="1" type="stmt"/>
+      <line num="100" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="101" count="1" type="stmt"/>
+      <line num="103" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="104" count="1" type="stmt"/>
+      <line num="106" count="1" type="stmt"/>
+      <line num="107" count="1" type="stmt"/>
+      <line num="108" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
